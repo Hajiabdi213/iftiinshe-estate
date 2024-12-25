@@ -235,7 +235,10 @@ const ProfilePage = () => {
           </h1>
           {listings.map((listing) => {
             return (
-              <div className="border rounded-lg p-3 flex justify-between items-center gap-4">
+              <div
+                key={listing._id}
+                className="border rounded-lg p-3 flex justify-between items-center gap-4"
+              >
                 <Link to={`/listing/${listing._id}`}>
                   <img
                     className="h-16 w-16 object-contain"
